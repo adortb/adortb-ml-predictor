@@ -1,0 +1,30 @@
+{
+  "version": "lr_ctr_v1.2",
+  "bias": -2.5,
+  "weights": {
+    "f1234567": 0.8,
+    "f2345678": 0.6,
+    "f3456789": -0.4,
+    "f4567890": 0.3,
+    "f5678901": -0.7,
+    "f6789012": 0.5,
+    "f7890123": -0.9,
+    "f8901234": 0.2,
+    "f9012345": 0.4,
+    "f123456": -0.3,
+
+    "_comment_high_activity_user": "高活跃用户特征权重（click_count_7d 高时对应 key 值高）",
+    "_comment_night_finance": "深夜+金融广告偏低 CTR（hour=23, ad_category=finance 交叉特征权重为负）",
+    "_comment_mobile_banner": "移动端 banner 广告适中 CTR"
+  },
+  "calibration": {
+    "a": 1.05,
+    "b": -0.02
+  },
+  "_meta": {
+    "trained_at": "2026-04-15T00:00:00Z",
+    "training_samples": 5000000,
+    "auc": 0.74,
+    "description": "Demo LR model for adortb CTR prediction. High-activity users + matched creative → high pCTR. Late night + finance ads → low pCTR."
+  }
+}
